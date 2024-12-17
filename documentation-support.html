@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Support - Durga Puja</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background: url('main-bg.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .nav-bg {
+            background: linear-gradient(to right, #ee2e3d, #ee2e3d, #eb6228, #ee2e3d);
+        }
+        .logo {
+            height: 80px;
+        }
+        .doc-card {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .download-btn {
+            background-color: #eb6228;
+            color: white;
+        }
+        .download-btn:hover {
+            background-color: #ee2e3d;
+            color: white;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
+        <div class="container">
+            <a href="index.html"><img src="logo.jpeg" class="logo me-4" alt="company-logo"></a>
+            <span class="navbar-text text-white fs-4 mx-auto">Bani Sangha Alwal</span>
+            <div>
+                <a href="index.html" class="btn btn-outline-light me-2">Go Home</a>
+                <a href="committee-support.html" class="btn btn-outline-light">Back to Committee Support</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Documentation Support</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="doc-card">
+                    <h3><i class="fas fa-file-alt me-2"></i> Required Permits</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Police Permission
+                            <a href="#" class="btn btn-sm download-btn float-end">Download Form</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Fire Safety Clearance
+                            <a href="#" class="btn btn-sm download-btn float-end">Download Form</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            Municipal Corporation Permit
+                            <a href="#" class="btn btn-sm download-btn float-end">Download Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="doc-card">
+                    <h3><i class="fas fa-clipboard-list me-2"></i> Guidelines</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <i class="fas fa-file-pdf text-danger me-2"></i>
+                            Safety Guidelines
+                            <a href="#" class="btn btn-sm download-btn float-end">Download PDF</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-file-pdf text-danger me-2"></i>
+                            Noise Pollution Rules
+                            <a href="#" class="btn btn-sm download-btn float-end">Download PDF</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-file-pdf text-danger me-2"></i>
+                            COVID-19 Protocols
+                            <a href="#" class="btn btn-sm download-btn float-end">Download PDF</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script>
+    function handleAssistanceSubmit(event) {
+        event.preventDefault();
+        alert("Assistance request submitted successfully!");
+        document.getElementById("assistanceForm").reset();
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Puja Celebration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #FF4D4D;
+            --secondary-color: #FFD700;
+            --accent-color: #800000;
+            --hero-bg: url('images/hero-durga.jpg');
+            --about-bg: url('images/about-durga.jpg');
+            --pandal-bg: url('images/pandal-hopping.jpg');
+            --events-bg: url('images/events-durga.jpg');
+            --contact-bg: url('images/contact-durga.jpg');
+            --footer-bg: url('images/footer-durga.jpg');
+        }
+
+        body {
+            font-family: 'Bangla MN', 'Noto Sans Bengali', sans-serif;
+            color: #333;
+        }
+        .display-1{
+            font-weight: 800;
+            font-size: 90px;
+            text-align: left;
+        }
+        .logo{
+            height: 80px;
+        }
+        .lead{
+            padding-left: 55px;
+        }
+        .hero-section {
+            /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--hero-bg); */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            background-image: url(durga_puja.jpeg);
+            background-size: cover;
+            text-align: left;
+        }
+        .nav-bg{
+            background: linear-gradient(to right, #ee2e3d ,#ee2e3d , #eb6228 , #ef3a37 );
+            
+        }
+        .marquee-dates {
+            background: var(--accent-color);
+            color: white;
+            padding: 15px 0;
+            overflow: hidden;
+        }
+
+        .marquee-content {
+            animation: marquee 40s linear infinite;
+            white-space: nowrap;
+            font-size: 21px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .service-card {
+            border: none;
+            transition: transform 0.3s;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .sponsor-section {
+            background: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .contact-section {
+            background: var(--accent-color);
+            color: white;
+            padding: 60px 0;
+        }
+        .text{
+            margin-left: 35px;
+        }
+        .btn-custom {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+        }
+        .sponser-heading{
+            font-size: 50px;
+            
+        }
+        .btn-custom:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        .icon-style{
+            color: white;
+        }
+        .icon{
+            color: #ee2e3d;
+        }
+
+        .puja-main1 {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .puja-crs1 {
+            position: relative;
+            overflow: hidden;
+        }
+        .nav-heading{
+            color: white;
+            padding-right: 35px;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: 'Roboto';
+        }
+        .item {
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        .nav-heading{
+            padding-left: 90px;
+        }
+        .media {
+            display: flex;
+            align-items: center;
+        }
+        .img-fluid-sponsor{
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            
+        }
+        .card-sponsor{
+            background-color: rgba(8, 253, 0, 0);
+        }
+
+        .sponsor-container{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            overflow-x: auto;
+            height: 170px;
+            max-width: 4000px;
+        }
+        .media-body {
+            padding-left: 15px;
+        }
+
+        .float-right-po {
+            text-align: right;
+            margin-top: 20px;
+        }
+        .founding-committee-section{
+            background-color: white;
+        }
+        .slick-arrow {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        .slick-arrow:hover {
+            color: var(--accent-color);
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top">
+        <div class="container d-flex justify-content-end align-items-center">
+            <img src="logo.jpeg" class="logo me-2" alt="company-logo">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div>
+                <h1 class="nav-heading">Bani Sangha Alwal</h1>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#past-events">Past Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sponsors">Sponsors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="founding-committee.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="social-icons ms-3">
+                    <a href="https://www.facebook.com" target="_blank" class="text-decoration-none  me-2">
+                        <i class="fab fa-facebook fa-lg icon-style"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="text-decoration-none  me-2">
+                        <i class="fab fa-instagram fa-lg icon-style"></i>
+                    </a>
+                    <a href="https://wa.me" target="_blank" class="text-decoration-none ">
+                        <i class="fab fa-whatsapp fa-lg icon-style"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<!-- Hero Section -->
+<section class="hero-section text-left" id="home">
+    <div class="container">
+        <h1 class="display-1">দুর্গা পূজা ২০২৫</h1>
+        <p class="lead">Experience the Divine Celebration</p>
+    </div>
+</section>
+
+<!-- Rolling Dates -->
+<div class="marquee-dates">
+    <div class="marquee-content">
+        Mahalaya: October 11, 2024 | Shashthi: October 16, 2024 | Saptami: October 17, 2024 | Ashtami: October 18, 2024 | Navami: October 19, 2024 | Dashami: October 20, 2024
+    </div>
+</div>
+
+<!-- Services Section -->
+<section class="py-5" id="services">
+    <div class="container">
+        <h1 class="text-center mb-5">Our Services</h1>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="virtual-darshan.html" class="text-decoration-none">
+                    <div class="service-card card h-100 p-4">
+                        <i class="fas fa-pray fa-3x mb-3  icon"></i>
+                        <h4 class="text-dark">Virtual Darshan</h4>
+                        <p class="text-dark">Experience live streaming of all pujas and ceremonies</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="pandal-guide.html" class="text-decoration-none">
+                    <div class="service-card card h-100 p-4">
+                        <i class="fas fa-map-marked-alt fa-3x mb-3  icon"></i>
+                        <h4 class="text-dark">Pandal Guide</h4>
+                        <p class="text-dark">Interactive map and guide to all pandals</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="committee-support.html" class="text-decoration-none">
+                    <div class="service-card card h-100 p-4">
+                        <i class="fas fa-hands-helping fa-3x mb-3  icon"></i>
+                        <h4 class="text-dark">Committee Support</h4>
+                        <p class="text-dark">Complete support for puja committees</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Past Events Video Gallery -->
+<section class="bg-light py-5" id="past-events">
+    <div class="container">
+        <h1 class="text-center mb-5">Past Celebrations</h1>
+        <div class="row g-4">
+            <div class="col-md-4 mr-4">
+                <div class="card">
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/2CyAgWm6t8g" 
+                            title="Durga Puja 2023 Highlights"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5>Durga Puja 2023 Highlights</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 ml-2 text">
+                <h3>About Durga Puja</h3>
+                <p>Celebrating Durga Puja is an emotion and no one should be deprived of it. The celebration starts with shopping and only ends on Dashami. And we are here to bring you the complete durga puja experience. Shop from some of the top brands, see some of the major pandals of the city, offer tarpon and anjali and order bhog from your favourite puja pandals.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Founding Committee Section -->
+<!-- <section class="py-5 founding-committee-section" id="founding-committee">
+    <div class="container">
+        <h1 class="text-center mb-5">Founding Committee</h1>
+        <p class="text-center"></p>
+        <p class="text-center">Over the years, the committee has grown, welcoming new members who share our passion for preserving the essence of Durga Puja. We invite everyone to join us in this celebration of faith, culture, and community.</p>
+        <div class="text-center">
+            <button class="btn btn-custom" onclick="window.location.href='founding-committee.html'">View More</button>
+        </div>
+    </div>
+</section> -->
+
+<!-- Sponsors Section -->
+<section class="sponsor-section" id="sponsors">
+    <div class="container">
+        <h1 class="text-center sponser-heading mb-5">Our Sponsors</h1>
+        <div class="row g-4 sponsor-container" style="overflow-x: auto; white-space: nowrap;">
+            <!-- Add sponsor logos and links -->
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>    
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>    
+            <div class="col-md-3 d-inline-block card-sponsor">
+                <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
+                    <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- New Form Section -->
+<section class="py-5 bg-grey" id="form-section">
+    <div class="container text-center">
+        <h1 class="mb-4">Register yourself</h1>
+        <form id="infoForm" onsubmit="handleInfoSubmit(event)">
+            <div class="mb-3">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" name="address" class="form-control" placeholder="Your Address" required>
+            </div>
+            <div class="mb-3">
+                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+                <input type="message" name="custom-message" class="form-control" placeholder="Your Message" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-custom">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for any queries or support</p>
+                <div class="mt-4">
+                    <p><i class="fas fa-envelope me-2"></i> contact@durgapuja.online</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Hyderabad, Telangana</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea name="message" class="form-control" rows="4" placeholder="Your Feedback" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-custom">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Copyright Section -->
+<footer class="text-center py-4">
+    <p>&copy; 2024 Bani Sangha Alwal. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    // Add any additional JavaScript functionality here
+    function handleSubmit(event) {
+        event.preventDefault();
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+    }
+
+    function handleInfoSubmit(event) {
+        event.preventDefault();
+        alert('Information submitted successfully!');
+        document.getElementById('infoForm').reset();
+    }
+
+    $(document).ready(function(){
+        $('.puja-crs1').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.prev-arrow'),
+            nextArrow: $('.next-arrow'),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
+
+</body>
+</html>
