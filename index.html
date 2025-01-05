@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Durga Puja Celebration</title>
@@ -20,77 +24,240 @@
         }
 
         body {
-            font-family: 'Bangla MN', 'Noto Sans Bengali', sans-serif;
+            font-family: 'Bangla MN', 'Noto Sans Bengali','Arial';
             color: #333;
+        }
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Navbar styling starts here */
+        .container-nav{
+            padding-left: 80px;
+            display: flex;
+            justify-content: space-between !important;
+        }
+        @media(max-width:768px){
+            .container-nav{
+                padding-left: 50px;
+            } 
+        }
+        @media(min-width:768px){
+            .navbar-links{
+            padding-left: 200px;
+        }
+        }
+        .nav-bg{
+            background: hsla(0, 0%, 100%, 0);
+            margin-top: 15px;
+            padding: 10px; 
+        }
+        .logo{
+            height: 85px;
+            margin-left: none;
+        }
+        .nav-bg:hover{
+            /* background: linear-gradient(#ee2e3d ); */
+            background-color: #8000005d; 
+        }
+        
+        .links{
+            color: white !important;
+            font-size: 17px;
+            font-weight: 600;
+            opacity: 1;
+        }
+        @media screen {
+            .nav-item:hover{
+                border-radius: 20px;
+                color: #800000;
+                padding: 0px;
+                border: 1px solid #800000;
+                transform: perspective(100px) /*rotateZ(20deg)*/ translateY(-5px) scale(1.3);
+            }
+            .icon-style:hover{
+                transform: perspective(100px) /*rotateZ(20deg)*/ translateY(-5px) scale(1.3);
+            }
+        }
+        .nav-heading{
+            color: white;
+            margin-left: 150px;
+            font-size: 55px;
+            font-weight: 600;
+            font-family: 'Roboto';
+        }
+        @media (max-width: 768px) {
+            .nav-heading{
+                font-size: 20px;
+                padding-left: 15px;
+                padding-right: 20px;
+                margin-left: 2px;
+            }
+            .logo{
+                height: 40px;
+                padding-left: 0px;
+                margin-left: 0px;
+            }
+            .container-nav{
+                padding-left: 25px !important;
+            }
+        }
+        .navbar {
+            transition: background-color 1s ease; /* Smooth transition for background color */
+        }
+        .navbar.scrolled {
+            background-color: #800000;
+            margin-top: 0px; /* Change to your desired color when scrolled */
+        }
+        .icon-style{
+            color: white;
+        }
+    /* Navbar styling ends here*/
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Hero section styling starts here*/
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Ensure it stays behind the text */
+            opacity: .95;/* Optional: adjust opacity for better text visibility */
+            transition: background-image 2s ease-in-out; /* Smooth transition */
         }
         .display-1{
             font-weight: 800;
-            font-size: 90px;
+            font-size: 95px;
             text-align: left;
         }
-        .logo{
-            height: 80px;
-        }
         .lead{
-            padding-left: 55px;
+            padding-left: 65px;
+            font-family: 'Arial';
+            font-size: 23px;
+        }
+        @media(max-width:768px){
+            .display-1{
+                padding-left: 8px;
+                font-weight: 600;
+                font-size: 71px;
+                text-align: left;
+                width: 130px;
+            }
+            .lead{
+                padding-left: 45px;
+                font-family: 'Arial';
+                font-size: 15px;
+                font-weight: 600;
+            }
+            .display-1 .one{
+                padding-left: 10px;
+            }
+            .display-1 .two{
+                padding-left: 30px;
+            }  
         }
         .hero-section {
-            /* background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--hero-bg); */
-            background-size: cover;
-            background-position: center;
             height: 100vh;
             display: flex;
             align-items: center;
             color: white;
-            background-image: url(durga_puja.jpeg);
-            background-size: cover;
             text-align: left;
         }
-        .nav-bg{
-            background: linear-gradient(to right, #ee2e3d ,#ee2e3d , #eb6228 , #ef3a37 );
-            
-        }
+    /* Hero section styling ends here*/
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Dates scroll section styling starts here */
         .marquee-dates {
             background: var(--accent-color);
             color: white;
             padding: 15px 0;
             overflow: hidden;
         }
-
         .marquee-content {
             animation: marquee 40s linear infinite;
             white-space: nowrap;
             font-size: 21px;
         }
-
+        .marquee-dates:hover .marquee-content{
+            animation-play-state: paused;
+        }
         @keyframes marquee {
             0% { transform: translateX(100%); }
             100% { transform: translateX(-100%); }
         }
+    /* Dates scroll section styling ends here */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Scroller section styling starts here */
+        .scroller {
+            max-width: 1850px;
+            margin-left: 80px;
+            border: #800000 solid 2px ;
+            
+        }
+        .scroller:hover .scroller__inner {   /*Updated to target the scroller on hover*/
+            animation-play-state: paused;   /*Pause the animation*/
+        }
 
+        .scroller__inner {
+            padding-block: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+        }
+
+        .scroller {
+            overflow: hidden;
+            -webkit-mask: linear-gradient(
+                90deg,
+                transparent,
+                white 20%,
+                white 80%,
+                transparent
+            );
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+
+        .scroller .scroller__inner {
+            width: max-content;
+            flex-wrap: wrap;
+        }
+
+        .scroller[data-direction="right"] {
+        --_animation-direction: reverse;
+        }
+
+        .scroller[data-direction="left"] {
+        --_animation-direction: forwards;
+        }
+
+        .scroller[data-speed="fast"] {
+        --_animation-duration: 20s;
+        }
+
+        .scroller[data-speed="slow"] {
+        --_animation-duration: 60s;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translate(calc(-50% - 0.5rem));
+            }
+        }
+    /* Scroller section styling ends here */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Services section styling starts here */
         .service-card {
             border: none;
             transition: transform 0.3s;
             background: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 0px 15px #800000;
             text-align: center;
-            
         }
-        
         .service-card:hover {
             transform: translateY(-10px);
         }
-
-        .sponsor-section {
-            background: #f8f9fa;
-            padding: 60px 0;
-        }
-
-        .contact-section {
-            background: var(--accent-color);
-            color: white;
-            padding: 60px 0;
+        .icon{
+            color: #ee2e3d;
         }
         .text{
             margin-left: 35px;
@@ -102,72 +269,109 @@
             padding: 10px 25px;
             border-radius: 25px;
         }
-        .sponser-heading{
-            font-size: 50px;
-            
-        }
         .btn-custom:hover {
             background: var(--accent-color);
             color: white;
         }
-        .icon-style{
+    /* Services section styling ends here */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Testimonial section styling starts here  */
+        .bg-red{
+            background-color: #800000;
             color: white;
         }
-        .icon{
-            color: #ee2e3d;
+        @media (orientation:portrait) and (max-width: 768px){
+            .testimonial-text-box{
+                padding: 20px;
+            } 
         }
-
-        .puja-main1 {
+        @media (orientation: landscape) and (min-width: 768px) {
+            .testimonial-text-box {
+                padding: 10px; /* Landscape specific styles */
+            } 
+        }
+    /* Testimonial section styling ends here  */ 
+/* ----------------------------------------------------------------------------------------------------------- */
+        /* .puja-main1 {
             padding: 60px 0;
             background: #f8f9fa;
-        }
-
-        .puja-crs1 {
+        } */
+        /* .puja-crs1 {
             position: relative;
             overflow: hidden;
-        }
-        .nav-heading{
-            color: white;
-            padding-right: 35px;
-            font-size: 40px;
-            font-weight: 600;
-            font-family: 'Roboto';
-        }
-        .item {
+        } */
+        /* .item {
             padding: 15px;
             transition: all 0.3s ease;
-        }
-        .nav-heading{
-            padding-left: 90px;
-        }
-        .media {
+        } */
+        /* .media {
             display: flex;
             align-items: center;
-        }
+        } */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Sponser section styling starts here */
         .img-fluid-sponsor{
-            width: 200px;
-            height: 100px;
+            width: 250px;
+            height: 150px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            
+        }
+        @media (max-width:768px){
+            .img-fluid-sponser{
+                width: 100px;
+                height: 70px;
+            }
+        }
+        .sponsor-section {
+            background: #f8f9fa;
+            padding: 60px 0;
         }
         .card-sponsor{
             background-color: rgba(8, 253, 0, 0);
         }
-
-        .sponsor-container{
+        .sponser-heading{
+            font-size: 45px;
+            color: #800000;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 17px;
+            
+        }
+    /* Sponser section styling ends here */
+/* ----------------------------------------------------------------------------------------------------------- */
+        /* .sponsor-container{
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-between;
-            overflow-x: auto;
+            overflow-x: hidden;
             height: 170px;
             max-width: 4000px;
-        }
-        .media-body {
+        } */
+        /* .media-body {
             padding-left: 15px;
+        } */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Registration section styling starts here  */
+        .registration-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: #800000;
+            padding-block: 50px;
         }
-
-        .float-right-po {
+    /* Registration section styling starts here  */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /*Feedback section styling starts here  */
+    .feedback-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Feedback section styling starts here  */
+/* ----------------------------------------------------------------------------------------------------------- */
+        /* .float-right-po {
             text-align: right;
             margin-top: 20px;
         }
@@ -184,67 +388,104 @@
 
         .slick-arrow:hover {
             color: var(--accent-color);
+        } */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Contact us section styling starts here  */
+        .contact-section {
+            background: var(--accent-color);
+            color: white;
+            padding: 20px;
         }
+        .contact-section-info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        @media (min-width: 768px) {
+        .contact-section-info div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            }
+        }
+        .contact-section-info p{
+            margin-left: 10px;
+        }
+    /* Contact us section styling ends here  */
+/* ----------------------------------------------------------------------------------------------------------- */
+    /* Footer section styling starts here  */
+        footer{
+            height: 65px;
+            padding-bottom: 20px;
+            font-size: 17px;
+        }
+    /* Footer section styling ends here  */
         
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark nav-bg fixed-top">
-        <div class="container d-flex justify-content-end align-items-center">
+        <div class="container-nav d-flex justify-content-end align-items-center">
             <img src="logo.jpeg" class="logo me-2" alt="company-logo">
+            <h1 class="nav-heading">Bani Sangha Alwal</h1>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div>
-                <h1 class="nav-heading">Bani Sangha Alwal</h1>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            
+            
+            <div class="collapse navbar-collapse justify-content-end navbar-links" id="navbarNav">
                 <ul class="navbar-nav ">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#home">Home</a>
+                    <li class="nav-item nav-word">
+                        <a class="nav-link links" href="#home">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                    <li class="nav-item nav-word">
+                        <a class="nav-link links" href="#services">Services</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#past-events">Past Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#sponsors">Sponsors</a>
+                    </li> -->
+                    <li class="nav-item nav-word">
+                        <a class="nav-link links" href="founding-committee.html">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="founding-committee.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                    <li class="nav-item nav-word">
+                        <a class="nav-link links" href="#contact">Contact</a>
                     </li>
                 </ul>
                 <div class="social-icons ms-3">
-                    <a href="https://www.facebook.com" target="_blank" class="text-decoration-none  me-2">
+                    <a href="https://www.facebook.com/profile.php?id=61571369279226" target="_blank" class="text-decoration-none  me-2">
                         <i class="fab fa-facebook fa-lg icon-style"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="_blank" class="text-decoration-none  me-2">
+                    <a href="https://www.instagram.com/banisanghaalwal/" target="_blank" class="text-decoration-none  me-2">
                         <i class="fab fa-instagram fa-lg icon-style"></i>
                     </a>
-                    <a href="https://wa.me" target="_blank" class="text-decoration-none ">
-                        <i class="fab fa-whatsapp fa-lg icon-style"></i>
+                    <a href="https://www.youtube.com/@BaniSanghaAlwal" target="_blank" class="text-decoration-none me-2">
+                        <i class="fab fa-youtube fa-lg icon-style"></i>
                     </a>
                 </div>
             </div>
+            
         </div>
     </nav>
+    
 <!-- Hero Section -->
 <section class="hero-section text-left" id="home">
     <div class="container">
-        <h1 class="display-1">দুর্গা পূজা ২০২৫</h1>
+        <h1 class="display-1">দুর্গা <span class="one">পূজা</span> <span class="two">  ২০২৫</span></h1>
         <p class="lead">Experience the Divine Celebration</p>
     </div>
+    <div class="hero-image"></div>
 </section>
 
 <!-- Rolling Dates -->
 <div class="marquee-dates">
     <div class="marquee-content">
-        Mahalaya: October 11, 2024 | Shashthi: October 16, 2024 | Saptami: October 17, 2024 | Ashtami: October 18, 2024 | Navami: October 19, 2024 | Dashami: October 20, 2024
+        Panchami: September 27, 2025 | Shashthi: September 28, 2025 | Saptami: September 29, 2025 | Ashtami: September 30, 2025 | Nabami: October 01, 2025 | Dashami: October 02, 2025
     </div>
 </div>
 
@@ -253,7 +494,7 @@
     <div class="container">
         <h1 class="text-center mb-5">Our Services</h1>
         <div class="row g-4">
-            <div class="col-md-4">
+            <div class="col-md-4 p-4">
                 <a href="virtual-darshan.html" class="text-decoration-none">
                     <div class="service-card card h-100 p-4">
                         <i class="fas fa-pray fa-3x mb-3  icon"></i>
@@ -262,7 +503,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 p-4">
                 <a href="pandal-guide.html" class="text-decoration-none">
                     <div class="service-card card h-100 p-4">
                         <i class="fas fa-map-marked-alt fa-3x mb-3  icon"></i>
@@ -271,8 +512,8 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
-                <a href="committee-support.html" class="text-decoration-none">
+            <div class="col-md-4 p-4">
+                <a href="documentation-support.html" class="text-decoration-none">
                     <div class="service-card card h-100 p-4">
                         <i class="fas fa-hands-helping fa-3x mb-3  icon"></i>
                         <h4 class="text-dark">Committee Support</h4>
@@ -284,141 +525,95 @@
     </div>
 </section>
 
-<!-- Past Events Video Gallery -->
-<section class="bg-light py-5" id="past-events">
-    <div class="container">
-        <h1 class="text-center mb-5">Past Celebrations</h1>
+<!-- Testimonial Section -->
+<section class="bg-red py-5" id="past-events">
+    <div class="container testimonial-text-box">
+        <h1 class="text-center mb-5">Testimonial</h1>
+        <p>Celebrating Durga Puja is an emotion and no one should be deprived of it. The celebration starts with shopping and only ends on Dashami. And we are here to bring you the complete durga puja experience. Shop from some of the top brands, see some of the major pandals of the city, offer tarpon and anjali and order bhog from your favourite puja pandals.
+        <p>Durga Puja is not just a festival, it is a celebration of life, culture, and community. Every year, as the vibrant colors and melodious sounds fill the air, I am reminded of the rich traditions that bind us together. The intricate artistry of the idols, the aroma of delicious bhog, and the warmth of family and friends create an atmosphere of joy and reverence. It is a time when we come together to honor the divine feminine, seek blessings, and celebrate the triumph of good over evil. For me, Durga Puja is a cherished experience that rejuvenates my spirit and strengthens my connection to my roots.</p> 
+        </p>
         <div class="row g-4">
-            <div class="col-md-4 mr-4">
-                <div class="card">
-                    <div class="ratio ratio-16x9">
-                        <iframe 
-                            src="https://www.youtube.com/embed/2CyAgWm6t8g" 
-                            title="Durga Puja 2023 Highlights"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    
-                    <div class="card-body">
-                        <h5>Durga Puja 2023 Highlights</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-7 ml-2 text">
-                <h3>About Durga Puja</h3>
-                <p>Celebrating Durga Puja is an emotion and no one should be deprived of it. The celebration starts with shopping and only ends on Dashami. And we are here to bring you the complete durga puja experience. Shop from some of the top brands, see some of the major pandals of the city, offer tarpon and anjali and order bhog from your favourite puja pandals.</p>
+            <div class="col-md-7 ml-2 text"></div>
+                <!-- <h3>About Durga Puja</h3> -->
+                
             </div>
         </div>
     </div>
 </section>
 
-<!-- Founding Committee Section -->
-<!-- <section class="py-5 founding-committee-section" id="founding-committee">
-    <div class="container">
-        <h1 class="text-center mb-5">Founding Committee</h1>
-        <p class="text-center"></p>
-        <p class="text-center">Over the years, the committee has grown, welcoming new members who share our passion for preserving the essence of Durga Puja. We invite everyone to join us in this celebration of faith, culture, and community.</p>
-        <div class="text-center">
-            <button class="btn btn-custom" onclick="window.location.href='founding-committee.html'">View More</button>
-        </div>
-    </div>
-</section> -->
+
 
 <!-- Sponsors Section -->
 <section class="sponsor-section" id="sponsors">
-    <div class="container">
-        <h1 class="text-center sponser-heading mb-5">Our Sponsors</h1>
-        <div class="row g-4 sponsor-container" style="overflow-x: auto; white-space: nowrap;">
-            <!-- Add sponsor logos and links -->
+    <h1 class="sponser-heading"> Our Sponsers</h1>
+    <div class="scroller" data-direction="right" data-speed="slow">
+        <div class="scroller__inner">
+            <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
+            </a>
+            <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
+            </a>
+            <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
+            </a>
+            <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
+            </a>
+            <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
+            </a>
+            <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
+                <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
+            </a>
+            <!-- Add sponsor logos and links
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
-                </a>
+                
             </div>
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
-                </a>
+                
             </div>    
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
-                </a>
+                
             </div>
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.coca-colacompany.com/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-1.jpg" alt="Coco-Cola" class="img-fluid img-fluid-sponsor">
-                </a>
+                
             </div>
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.hcltech.com/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-2.jpg" alt="HCL" class="img-fluid img-fluid-sponsor">
-                </a>
+                
             </div>    
             <div class="col-md-3 d-inline-block card-sponsor">
-                <a href="https://www.lenovo.com/in/en/" target="_blank" class="card-sponsor p-4 text-center">
-                    <img src="sponsor-3.png" alt="Lenovo" class="img-fluid img-fluid-sponsor">
-                </a>
-            </div>
+                
+            </div> -->
         </div>
     </div>
 </section>
 
-<!-- New Form Section -->
+
+<!-- Registration Section -->
 <section class="py-5 bg-grey" id="form-section">
-    <div class="container text-center">
-        <h1 class="mb-4">Register yourself</h1>
-        <form id="infoForm" onsubmit="handleInfoSubmit(event)">
-            <div class="mb-3">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-                <input type="text" name="address" class="form-control" placeholder="Your Address" required>
-            </div>
-            <div class="mb-3">
-                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" required>
-            </div>
-            <div class="mb-3">
-                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-                <input type="message" name="custom-message" class="form-control" placeholder="Your Message" required>
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-custom">Submit</button>
-            </div>
-        </form>
+    <div class="registration-container">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd4ZJTqSCnk5bwbnCGhDMtdBfBmtjmswzilCLR-mc6zHo_wrw/viewform?embedded=true" width="640" height="980" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </div>
 </section>
 
-
-
+<!--Feedback Section-->
+<section class="feedback-section">
+    <div class="feedback-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeXIdajr8Wi1m-h-xVofQs1iG3QC6T4n6P1M2yXEGwGgwK2Qg/viewform?embedded=true" width="640" height="990" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+</section>
 <!-- Contact Section -->
 <section class="contact-section" id="contact">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="contact-section-info">
                 <h2>Contact Us</h2>
                 <p>Get in touch with us for any queries or support</p>
-                <div class="mt-4">
-                    <p><i class="fas fa-envelope me-2"></i> contact@durgapuja.online</p>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Hyderabad, Telangana</p>
+                <div class="mt-4 ">
+                    <p><i class="fas fa-envelope me-2 ml-2"></i> banisanghaalwal1950@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt me-2 ml-2"></i> Hyderabad, Telangana</p>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <div class="mb-3">
-                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                    </div>
-                    <div class="mb-3">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Your Feedback" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-custom">Send Message</button>
-                </form>
             </div>
         </div>
     </div>
@@ -426,7 +621,7 @@
 
 <!-- Copyright Section -->
 <footer class="text-center py-4">
-    <p>&copy; 2024 Bani Sangha Alwal. All rights reserved.</p>
+    <p>&copy; 2025 Bani Sangha Alwal. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -446,33 +641,95 @@
         document.getElementById('infoForm').reset();
     }
 
-    $(document).ready(function(){
-        $('.puja-crs1').slick({
-            dots: false,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            prevArrow: $('.prev-arrow'),
-            nextArrow: $('.next-arrow'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+    // $(document).ready(function(){
+    //     $('.puja-crs1').slick({
+    //         dots: false,
+    //         infinite: true,
+    //         speed: 300,
+    //         slidesToShow: 3,
+    //         slidesToScroll: 1,
+    //         prevArrow: $('.prev-arrow'),
+    //         nextArrow: $('.next-arrow'),
+    //         responsive: [
+    //             {
+    //                 breakpoint: 1024,
+    //                 settings: {
+    //                     slidesToShow: 2,
+    //                     slidesToScroll: 1
+    //                 }
+    //             },
+    //             {
+    //                 breakpoint: 600,
+    //                 settings: {
+    //                     slidesToShow: 1,
+    //                     slidesToScroll: 1
+    //                 }
+    //             }
+    //         ]
+    //     });
+    // });
+
+    // Array of image URLs
+    const images = [
+
+        'durga_puja_photos/photo1.jpeg',
+        'durga_puja_photos/photo2.jpeg',
+        'durga_puja_photos/photo3.jpeg',
+        'durga_puja_photos/photo4.jpeg',
+        'durga_puja_photos/photo5.jpeg',
+        'durga_puja_photos/photo6.jpeg',
+        'durga_puja_photos/photo7.jpeg'
+    ];
+
+    let currentIndex = 0;
+
+    function changeBackground() {
+        const heroImage = document.querySelector('.hero-image');
+        heroImage.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+    }
+
+    // Initial call to set the first image
+    changeBackground();
+    // Change image every 5 seconds
+    setInterval(changeBackground, 3000);
+
+    $(document).ready(function() {
+        // Add scroll event listener
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 770) { // Adjust the value as needed
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
         });
     });
+    const scrollers = document.querySelectorAll(".scroller");
+    // If a user hasn't opted in for recuded motion, then we add the animation
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+    }
+    addAnimation();
+
+    function addAnimation() {
+        scrollers.forEach((scroller) => {
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", true);
+
+            // Make an array from the elements within `.scroller-inner`
+            const scrollerInner = scroller.querySelector(".scroller__inner");
+            const scrollerContent = Array.from(scrollerInner.children);
+
+            // For each item in the array, clone it
+            // add aria-hidden to it
+            // add it into the `.scroller-inner`
+            scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+            });
+        });
+    }
 </script>
 
 </body>

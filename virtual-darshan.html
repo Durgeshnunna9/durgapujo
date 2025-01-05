@@ -8,29 +8,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .nav-bg {
-            background: linear-gradient(to right, #ee2e3d, #ee2e3d, #eb6228, #ee2e3d);
+            background-color:#800000;
         }
         .logo {
             height: 80px;
         }
-        .stream-card {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        .navbar-text{
+            font-size: 38px !important;
+            font-weight: 600;
         }
-        .bg-table{
-            background-image: url(virtual-darshan-bg.png);
+        @media(max-width:768px){
+            .logo{
+                height: 40px;
+            }
+            .navbar-text{
+                font-size: 18px !important;
+                /* font-weight: 600; */
+            }
+            .btn-outline-light{
+                font-size: 13px;
+                padding: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        .darshan-data{
+            background-image: url(durga_puja_photos/photo7.jpeg);
             background-size: cover;
             background-position: center;
+            margin-top: 25px;
+            
+        }
+        .video-link{
+            font-weight: 600;
+            font-size: 33px;
+        }
+        .container-video{
+            background-color: rgba(236, 235, 235, 0.575);
+            color: #000000;
+        }
+        .info-card{
+            margin-top: 0px;
+        }
+        
+        .bg-table{
             margin: 0 -12px;
             padding: 20px 12px;
             padding-right: 32px;
             color: white;
             padding: 50px;
         }
+        .bg-table h2{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: Roboto;
+        }
         .table{
-            color: white;
-            background-color: rgba(236, 235, 235, 0.274);
+            color: rgb(0, 0, 0);
+            font-size: 25px;
+            font-weight: 600;
+            background-color: rgba(236, 235, 235, 0.575);
             width: auto;
             max-width: 100%;
         }
@@ -46,6 +84,7 @@
         .table td{
             font-size: 18px;
             font-family: 'Arial';
+            padding-right: 20px;
         }
         body{
             background-color: #000000;
@@ -61,133 +100,163 @@
             font-weight: bold;
             font-family: Roboto;
         }
+        @media(max-width:768px){
+            .head-text{
+                font-size: 27px;
+            }
+            .video-link{
+                font-size: 18px;
+            }
+            .info-card p{
+                font-size: 19px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+        }
+        .table-heading{
+            color: #000000;
+            font-size: 55px !important;
+            font-weight: 600;
+            padding-bottom: 30px;
+            text-shadow: #ffffff 0 0 10px;
+        }
+        .home-btn{
+            border-radius: 15px;
+            box-shadow: white 0 0 1px;
+            text-shadow: #800000;
+        }
+        .home-btn:hover{
+            transform: scale(1.1);
+        }
         .container {
             padding-right: 20px;
+        }
+        .info-card{
+            text-align: center;
+            padding-block: 10px;
+            background-color: 0 0% 100%/0.1;
+            font-size: 22px;
+        }
+        .info-card a{
+            font-size: 26px;
         }
     </style>
 </head>
 <body>
-    
     <!-- Same navbar as main page -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-bg">
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" class="logo me-4" alt="company-logo"></a>
             <span class="navbar-text text-white fs-4 mx-auto">Bani Sangha Alwal</span>
             <div>
-                <a href="index.html" class="btn btn-outline-light me-2">Go Home</a>
-                <a href="committee-support.html" class="btn btn-outline-light">Back to Committee Support</a>
+                <a href="index.html" class="btn btn-outline-light home-btn me-2">Go Home</a>
             </div>
         </div>
     </nav>
-
-    <div class="container py-5">
-        <h1 class="text-center head-text mb-5">Virtual Darshan</h1>
-        
-        <!-- Live Stream Section -->
-        <div class="row mb-5">
-            <div class="col-12">
-                <div class="stream-card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="https://www.youtube.com/embed/AWKXVD2rshw" alt="live-video" allowfullscreen></iframe>
-                    </div>
+    <section class="darshan-data">
+        <div class="container-video py-4">
+            <h1 class="text-center head-text mb-3">Virtual Darshan</h1>
+            <div class="info-card">
+                <p>Visit our Youtube for daily live puja videos</p>
+                <a href="https://www.youtube.com/@BaniSanghaAlwal" target="_blank" class="video-link">Durga Pujo</a>
+            </div>
+    
+            <!-- Schedule Section -->
+        </div>
+        <div class="bg-table">
+            <h2 class="mb-4 table-heading">Puja Schedule</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Ceremony</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>September 27, 2025</td>
+                            <td>6:00 AM</td>
+                            <td>Panchami Puja - Kalparambho, Bodhan & Amantran</td>
+                        </tr>
+                        <tr>
+                            <td>October 28, 2025</td>
+                            <td>7:00 PM</td>
+                            <td>Shashthi Arati</td>
+                        </tr>
+                        <tr>
+                            <td>October 17, 2024</td>
+                            <td>7:00 AM</td>
+                            <td>Saptami Puja & Nabapatrika Snan</td>
+                        </tr>
+                        <tr>
+                            <td>October 17, 2024</td>
+                            <td>11:00 AM</td>
+                            <td>Pushpanjali</td>
+                        </tr>
+                        <tr>
+                            <td>October 17, 2024</td>
+                            <td>7:00 PM</td>
+                            <td>Sandhya Arati</td>
+                        </tr>
+                        <tr>
+                            <td>October 18, 2024</td>
+                            <td>6:30 AM</td>
+                            <td>Ashtami Puja</td>
+                        </tr>
+                        <tr>
+                            <td>October 18, 2024</td>
+                            <td>9:00 AM</td>
+                            <td>Anjali & Pushpanjali</td>
+                        </tr>
+                        <tr>
+                            <td>October 18, 2024</td>
+                            <td>11:30 AM</td>
+                            <td>Kumari Puja</td>
+                        </tr>
+                        <tr>
+                            <td>October 18, 2024</td>
+                            <td>7:00 PM</td>
+                            <td>Sandhya Arati</td>
+                        </tr>
+                        <tr>
+                            <td>October 19, 2024</td>
+                            <td>6:30 AM</td>
+                            <td>Navami Puja</td>
+                        </tr>
+                        <tr>
+                            <td>October 19, 2024</td>
+                            <td>10:00 AM</td>
+                            <td>Maha Pushpanjali</td>
+                        </tr>
+                        <tr>
+                            <td>October 19, 2024</td>
+                            <td>7:00 PM</td>
+                            <td>Sandhya Arati & Dhunuchi Nach</td>
+                        </tr>
+                        <tr>
+                            <td>October 20, 2024</td>
+                            <td>10:00 AM</td>
+                            <td>Dashami Puja</td>
+                        </tr>
+                        <tr>
+                            <td>October 20, 2024</td>
+                            <td>11:30 AM</td>
+                            <td>Sindur Khela</td>
+                        </tr>
+                        <tr>
+                            <td>October 20, 2024</td>
+                            <td>4:00 PM</td>
+                            <td>Visarjan & Shanti Jal</td>
+                        </tr>
+                            <!-- Add more schedule rows -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-
-        <!-- Schedule Section -->
-    </div>
-    <div class="bg-table">
-        <h2 class="mb-4">Puja Schedule</h2>
-        <div class="table-responsive">
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Ceremony</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>October 16, 2024</td>
-                        <td>6:00 AM</td>
-                        <td>Shashthi Puja - Kalparambho, Bodhan & Amantran</td>
-                    </tr>
-                    <tr>
-                        <td>October 16, 2024</td>
-                        <td>7:00 PM</td>
-                        <td>Shashthi Arati</td>
-                    </tr>
-                    <tr>
-                        <td>October 17, 2024</td>
-                        <td>7:00 AM</td>
-                        <td>Saptami Puja & Nabapatrika Snan</td>
-                    </tr>
-                    <tr>
-                        <td>October 17, 2024</td>
-                        <td>11:00 AM</td>
-                        <td>Pushpanjali</td>
-                    </tr>
-                    <tr>
-                        <td>October 17, 2024</td>
-                        <td>7:00 PM</td>
-                        <td>Sandhya Arati</td>
-                    </tr>
-                    <tr>
-                        <td>October 18, 2024</td>
-                        <td>6:30 AM</td>
-                        <td>Ashtami Puja</td>
-                    </tr>
-                    <tr>
-                        <td>October 18, 2024</td>
-                        <td>9:00 AM</td>
-                        <td>Anjali & Pushpanjali</td>
-                    </tr>
-                    <tr>
-                        <td>October 18, 2024</td>
-                        <td>11:30 AM</td>
-                        <td>Kumari Puja</td>
-                    </tr>
-                    <tr>
-                        <td>October 18, 2024</td>
-                        <td>7:00 PM</td>
-                        <td>Sandhya Arati</td>
-                    </tr>
-                    <tr>
-                        <td>October 19, 2024</td>
-                        <td>6:30 AM</td>
-                        <td>Navami Puja</td>
-                    </tr>
-                    <tr>
-                        <td>October 19, 2024</td>
-                        <td>10:00 AM</td>
-                        <td>Maha Pushpanjali</td>
-                    </tr>
-                    <tr>
-                        <td>October 19, 2024</td>
-                        <td>7:00 PM</td>
-                        <td>Sandhya Arati & Dhunuchi Nach</td>
-                    </tr>
-                    <tr>
-                        <td>October 20, 2024</td>
-                        <td>10:00 AM</td>
-                        <td>Dashami Puja</td>
-                    </tr>
-                    <tr>
-                        <td>October 20, 2024</td>
-                        <td>11:30 AM</td>
-                        <td>Sindur Khela</td>
-                    </tr>
-                    <tr>
-                        <td>October 20, 2024</td>
-                        <td>4:00 PM</td>
-                        <td>Visarjan & Shanti Jal</td>
-                    </tr>
-                        <!-- Add more schedule rows -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    </section>
 </body>
 </html> 
