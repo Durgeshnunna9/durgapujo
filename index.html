@@ -117,6 +117,7 @@
             top: 0;
             left: 0;
             right: 0;
+            
             bottom: 0;
             background-size: cover;
             background-position: center;
@@ -424,6 +425,23 @@
         }
     /* Footer section styling ends here  */
         
+    /* CSS to maintain aspect ratio for images */
+    .image-container {
+        width: 100%; /* Set the width of the container */
+        height: 0; /* Set height to 0 to use padding for aspect ratio */
+        padding-top: 75%; /* Aspect ratio (height/width) - 75% for 4:3 ratio */
+        position: relative; /* Position relative for absolute positioning of the image */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .image-container img {
+        position: absolute; /* Position the image absolutely */
+        top: 0; /* Align to the top */
+        left: 0; /* Align to the left */
+        width: 100%; /* Make the image fill the container */
+        height: 100%; /* Make the image fill the container */
+        object-fit: cover; /* Cover the container while maintaining aspect ratio */
+    }
     </style>
 </head>
 <body>
@@ -450,9 +468,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#sponsors">Sponsors</a>
                     </li> -->
-                    <li class="nav-item nav-word">
+                    <!-- <li class="nav-item nav-word">
                         <a class="nav-link links" href="founding-committee.html">About Us</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item nav-word">
                         <a class="nav-link links" href="#contact">Contact</a>
                     </li>
@@ -461,7 +479,7 @@
                     <a href="https://www.facebook.com/profile.php?id=61571369279226" target="_blank" class="text-decoration-none  me-2">
                         <i class="fab fa-facebook fa-lg icon-style"></i>
                     </a>
-                    <a href="https://www.instagram.com/banisanghaalwal/" target="_blank" class="text-decoration-none  me-2">
+                    <a href="https://www.instagram.com/banisanghaal/" target="_blank" class="text-decoration-none  me-2">
                         <i class="fab fa-instagram fa-lg icon-style"></i>
                     </a>
                     <a href="https://www.youtube.com/@BaniSanghaAlwal" target="_blank" class="text-decoration-none me-2">
@@ -671,10 +689,9 @@
 
     // Array of image URLs
     const images = [
-
-        'durga_puja_photos/photo1.jpeg',
-        'durga_puja_photos/photo2.jpeg',
-        'durga_puja_photos/photo3.jpeg',
+        'durga_puja_photos/reduced/photo1.jpeg',
+        'durga_puja_photos/reduced/photo2.jpeg',
+        'durga_puja_photos/reduced/photo3.jpeg',
         'durga_puja_photos/photo4.jpeg',
         'durga_puja_photos/photo5.jpeg',
         'durga_puja_photos/photo6.jpeg',
@@ -683,15 +700,30 @@
 
     let currentIndex = 0;
 
+    // Preload images
+    const preloadImages = (imageArray) => {
+        imageArray.forEach(src => {
+            const img = new Image();
+            img.src = src;
+            img.loading = 'lazy';
+            img.width = '1800 px';
+            img.height = '1920 px' // Preload the image
+        });
+    };
+
+    // Function to change the background image
     function changeBackground() {
         const heroImage = document.querySelector('.hero-image');
         heroImage.style.backgroundImage = `url(${images[currentIndex]})`;
         currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
     }
 
+    // Preload images before starting the background change
+    preloadImages(images);
+
     // Initial call to set the first image
     changeBackground();
-    // Change image every 5 seconds
+    // Change image every 3 seconds
     setInterval(changeBackground, 3000);
 
     $(document).ready(function() {
